@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+	<name>MOD_DEMOGHSVS</name>
+	<author>G@HService Berlin Neukölln, Volkmar Volli Schlothauer</author>
+	<creationDate>2023-05-08</creationDate>
+	<copyright>(C) 2023, G@HService Berlin Neukölln, Volkmar Volli Schlothauer (ghsvs.de)</copyright>
+	<license>GNU General Public License version 3 or later; see LICENSE.txt.</license>
+	<authorUrl>https://ghsvs.de</authorUrl>
+	<version>0.0.1</version>
+	<description>MOD_DEMOGHSVS_XML_DESCRIPTION</description>
+
+	<files>
+		<folder module="mod_demoghsvs">services</folder>
+		<filename>LICENSE.txt</filename>
+		<folder>language</folder>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<namespace path="src">GHSVS\Module\DemoGhsvs</namespace>
+
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+
+				<field name="meinImage" type="media"
+					label="MOD_DEMOGHSVS_IMAGE"/>
+
+				<field name="meinText" type="textarea"
+					label="MOD_DEMOGHSVS_TEXT"/>
+
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					class="form-select"
+					validate="moduleLayout"
+				/>
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					rows="3"
+					validate="CssIdentifier"
+				/>
+
+				<field
+					name="cache"
+					type="list"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					default="1"
+					filter="integer"
+					validate="options"
+					>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="number"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					default="900"
+					filter="integer"
+				/>
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static"
+					>
+					<option value="static"></option>
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
