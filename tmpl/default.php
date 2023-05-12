@@ -15,13 +15,9 @@ Available variables:
 $modId = 'modId-' . $module->id;
 ?>
 <div id="<?php echo $modId; ?>" class="mod_demoghsvs">
-	<div>
-		meinImage is: <?php echo $meinImage; ?>
-	</div>
-	<div>
-		meinText is: <?php echo $meinText; ?>
-	</div>
-	<div>
-		Sitename is: <?php echo $app->get('sitename', ''); ?>
-	</div>
+	<ol>
+		<li>meinImage is: <?php echo $meinImage; ?></li>
+		<li>meinText is: <?php echo $meinText; ?></li>
+		<li>Sitename is: <?php echo $app->get('sitename', ''); ?></li>
+	</ol>
 </div>
