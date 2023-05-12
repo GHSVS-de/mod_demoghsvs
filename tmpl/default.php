@@ -16,12 +16,12 @@ $modId = 'modId-' . $module->id;
 ?>
 <div id="<?php echo $modId; ?>" class="mod_demoghsvs">
 	<div>
-		<?php echo $image; ?>
+		meinImage is: <?php echo $meinImage; ?>
 	</div>
 	<div>
-		<?php echo $text; ?>
+		meinText is: <?php echo $meinText; ?>
 	</div>
 	<div>
-		<?php echo $app->get('sitename', ''); ?>
+		Sitename is: <?php echo $app->get('sitename', ''); ?>
 	</div>
 </div>
