@@ -20,7 +20,7 @@ class Dispatcher extends AbstractModuleDispatcher implements HelperFactoryAwareI
 
 		$data['meinImage'] = $helper->getMeinImage($data['params']);
 		$data['meinText'] = $helper->getMeinText($data['params']);
-
+		$data['modId'] = 'modId-' . $data['module']->id;
 		return $data;
 	}
 }

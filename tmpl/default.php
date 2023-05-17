@@ -8,11 +8,10 @@ Available variables:
 - Joomla's Application Object $app
 - Joomla's Input Object $input
 - String $template
-- String $image
-- String $text
+- String $meinImage
+- String $meinText
+- String $modId
 */
-
-$modId = 'modId-' . $module->id;
 ?>
 <div id="<?php echo $modId; ?>" class="mod_demoghsvs">
 	<ol>
